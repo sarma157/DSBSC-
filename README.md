@@ -48,11 +48,33 @@ Model Waveform
 <img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
 
 Program
+Am=6.5;
+fm=502;
+Ac=13.0;
+fc=5020;
+fs=502000;
+t=0:1/fs:2/fm;
+m=Am*cos(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,m);
+c=Ac*cos(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,c);
+s1=(Ac+m).*cos(2*3.14*fc*t);
+s2=(Ac-m).*cos(2*3.14*fc*t);
+s=s1-s2;
+subplot(3,1,3);
+plot(t,s);
+
 
 Output Graph
+<img width="1918" height="1051" alt="image" src="https://github.com/user-attachments/assets/3509a97b-046e-43e9-979b-bfe3602ddf13" />
+
 
 
 Tablular Column
+![WhatsApp Image 2025-10-07 at 14 26 50_02c893e6](https://github.com/user-attachments/assets/7cce1665-cb90-4a2c-a510-6025ffa37352)
+
 
 
 Result
